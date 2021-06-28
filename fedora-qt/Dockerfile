@@ -30,6 +30,8 @@ RUN dnf -y update && dnf -y install \
     qt5-qtx11extras-devel \
     qt5-qtxmlpatterns-devel \
     \
+    kf5-networkmanager-qt-devel kf5-syntax-highlighting-devel \
+    \
     qwt-qt5-devel \
     \
     flatbuffers-devel protobuf-devel protobuf-compiler \
