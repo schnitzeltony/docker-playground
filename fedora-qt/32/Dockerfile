@@ -11,7 +11,8 @@ MAINTAINER Andreas Müller <schnitzeltony@gmail.com>
 RUN dnf -y update && dnf -y install \
     cmake git clazy \
     systemd-devel \
-    python3 python3-numpy \
+    openssl-devel \
+    python3-devel python3-numpy \
     qt5-linguist qt5-doctools qt5-qtscript \
     qt5-qtlocation-devel \
     qt5-qtcharts-devel \
