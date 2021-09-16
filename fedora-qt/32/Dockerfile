@@ -1,6 +1,6 @@
 # Container for qt5 CI
 #
-# to build/push change in this ddirectory and enter
+# to build/push change in this directory and enter
 # docker build --tag fedora-qt5:32 .
 # docker push fedora-qt5:32 schnitzeltony/fedora-qt5:32
 
@@ -13,6 +13,7 @@ RUN dnf -y update && dnf -y install \
     systemd-devel \
     openssl-devel \
     python3-devel python3-numpy \
+    xsd xerces-c-devel \
     qt5-linguist qt5-doctools qt5-qtscript \
     qt5-qtlocation-devel \
     qt5-qtcharts-devel \
