@@ -2,6 +2,7 @@
 #
 # to build/push change in this directory and enter
 # docker build --tag fedora-qt5:32 .
+# docker login docker.io
 # docker push fedora-qt5:32 schnitzeltony/fedora-qt5:32
 
 FROM fedora:32
