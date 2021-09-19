@@ -15,6 +15,7 @@ RUN dnf -y update && dnf -y install \
     openssl-devel \
     python3-devel python3-numpy \
     xsd xerces-c-devel \
+    php-jsonlint \
     qt5-linguist qt5-doctools qt5-qtscript \
     qt5-qtlocation-devel \
     qt5-qtcharts-devel \
