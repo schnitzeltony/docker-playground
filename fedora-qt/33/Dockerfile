@@ -41,6 +41,8 @@ RUN dnf -y update && dnf -y install \
     \
     flatbuffers-devel protobuf-devel protobuf-compiler \
     \
+    gtest-devel \
+    \
     && dnf clean all \
     && rpm -qa --queryformat '%10{size} - %-25{name} \t %{version}\n' | sort -n
 
