@@ -1,9 +1,9 @@
 # Image for very old oe-builds
 #
 # to build/push change in this directory and enter
-# docker build --tag ubuntu-oe-old-build:14.04 .
+# docker build --tag oe-build-image:ubuntu-14.04 .
 # docker login docker.io
-# docker push ubuntu-oe-old-build:14.04 schnitzeltony/ubuntu-oe-old-build:14.04
+# docker push oe-build-image:ubuntu-14.04 schnitzeltony/oe-build-image:ubuntu-14.04
 
 FROM ubuntu-debootstrap:14.04
 
