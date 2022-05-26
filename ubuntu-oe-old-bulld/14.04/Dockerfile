@@ -5,7 +5,7 @@
 # docker login docker.io
 # docker push ubuntu-oe-old-build:14.04 schnitzeltony/ubuntu-oe-old-build:14.04
 
-FROM docker.io/ubuntu-debootstrap:14.04
+FROM ubuntu-debootstrap:14.04
 
 MAINTAINER Andreas Müller <schnitzeltony@gmail.com>
 
