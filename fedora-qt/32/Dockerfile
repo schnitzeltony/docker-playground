@@ -9,7 +9,8 @@ FROM fedora:32
 
 MAINTAINER Andreas Müller <schnitzeltony@gmail.com>
 
-RUN dnf -y update && dnf -y install \
+RUN dnf -y --setopt=install_weak_deps=False --best update
+RUN dnf -y --setopt=install_weak_deps=False --best install \
     cmake git clazy \
     systemd-devel \
     openssl-devel \
@@ -42,8 +43,8 @@ RUN dnf -y update && dnf -y install \
     \
     flatbuffers-devel protobuf-devel protobuf-compiler \
     \
-    gtest-devel \
-    \
-    && dnf clean all \
-    && rpm -qa --queryformat '%10{size} - %-25{name} \t %{version}\n' | sort -n
+    gtest-devel
+
+RUN dnf clean all
+RUN rpm -qa --queryformat '%10{size} - %-25{name} \t %{version}\n' | sort -n
 
