@@ -37,6 +37,12 @@ RUN dnf -y install \
 RUN dnf -y install \
     ftp
 
+# menuconfig
+RUN dnf -y install \
+    xfce4-terminal \
+    xauth \
+    ncurses-devel
+
 # debug tools
 RUN dnf -y install \
     strace \
