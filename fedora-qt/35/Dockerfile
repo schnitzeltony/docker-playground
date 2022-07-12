@@ -42,7 +42,7 @@ RUN dnf -y --setopt=install_weak_deps=False --best install \
     \
     qwt-qt5-devel \
     \
-    flatbuffers-devel protobuf-devel protobuf-compiler \
+    flatbuffers-devel flatbuffers-compiler protobuf-devel protobuf-compiler \
     \
     gtest-devel
 
