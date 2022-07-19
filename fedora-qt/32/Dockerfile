@@ -44,7 +44,8 @@ RUN dnf -y --setopt=install_weak_deps=False --best install \
     \
     flatbuffers-devel protobuf-devel protobuf-compiler \
     \
-    gtest-devel
+    gtest-devel \
+    xorg-x11-server-Xvfb
 
 RUN dnf clean all
 RUN rpm -qa --queryformat '%10{size} - %-25{name} \t %{version}\n' | sort -n
