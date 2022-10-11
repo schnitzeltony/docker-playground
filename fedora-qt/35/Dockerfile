@@ -17,7 +17,7 @@ RUN dnf -y --setopt=install_weak_deps=False --best install \
     python3-devel python3-numpy \
     xsd xerces-c-devel \
     fftw-devel \
-    php-jsonlint \
+    php-jsonlint python3-jsonschema \
     qt5-linguist qt5-doctools qt5-qtscript \
     qt5-qtlocation-devel \
     qt5-qtcharts-devel \
