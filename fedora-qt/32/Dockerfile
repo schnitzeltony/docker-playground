@@ -45,8 +45,10 @@ RUN dnf -y --setopt=install_weak_deps=False --best install \
     flatbuffers-devel protobuf-devel protobuf-compiler \
     \
     gtest-devel \
-    xorg-x11-server-Xvfb
-
+    xorg-x11-server-Xvfb \
+    ghdl 
+    
+RUN pip install vunit    
 RUN dnf clean all
 RUN rpm -qa --queryformat '%10{size} - %-25{name} \t %{version}\n' | sort -n
 
