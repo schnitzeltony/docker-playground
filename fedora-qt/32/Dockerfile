@@ -15,6 +15,7 @@ RUN dnf -y --setopt=install_weak_deps=False --best install \
     systemd-devel \
     openssl-devel \
     python3-devel python3-numpy \
+    python3-pip \
     xsd xerces-c-devel \
     fftw-devel \
     php-jsonlint python3-jsonschema \
@@ -46,9 +47,11 @@ RUN dnf -y --setopt=install_weak_deps=False --best install \
     \
     gtest-devel \
     xorg-x11-server-Xvfb \
-    ghdl 
+    ghdl
+
     
-RUN pip install vunit    
 RUN dnf clean all
+RUN python3 -m pip install vunit
+# we ignored this :WARNING: Running pip install with root privileges is generally not a good idea.
 RUN rpm -qa --queryformat '%10{size} - %-25{name} \t %{version}\n' | sort -n
 
