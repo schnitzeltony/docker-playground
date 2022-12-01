@@ -51,7 +51,7 @@ RUN dnf -y --setopt=install_weak_deps=False --best install \
 
     
 RUN dnf clean all
-RUN python3 -m pip install vunit
+RUN python3 -m pip install --user vunit
 # we ignored this :WARNING: Running pip install with root privileges is generally not a good idea.
 RUN rpm -qa --queryformat '%10{size} - %-25{name} \t %{version}\n' | sort -n
 
