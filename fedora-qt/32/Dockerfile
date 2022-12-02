@@ -51,8 +51,11 @@ RUN dnf -y --setopt=install_weak_deps=False --best install \
 
     
 RUN dnf clean all
+
 RUN pip3 install vunit
-RUN pip3 list
+RUN pip3 install vunit_hdl
+RUN pip3 install colorama
 # we ignored this :WARNING: Running pip install with root privileges is generally not a good idea.
+
 RUN rpm -qa --queryformat '%10{size} - %-25{name} \t %{version}\n' | sort -n
 
