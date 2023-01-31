@@ -48,6 +48,10 @@ RUN dnf -y install \
     strace \
     iputils
 
+# user-experience
+RUN dnf -y install \
+    bash-completion
+
 RUN dnf -y clean all
 RUN rpm -qa --queryformat '%10{size} - %-25{name} \t %{version}\n' | sort -n
 
