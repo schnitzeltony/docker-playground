@@ -47,7 +47,11 @@ RUN dnf -y --setopt=install_weak_deps=False --best install \
     \
     gtest-devel \
     xorg-x11-server-Xvfb \
-    ghdl
+    ghdl \
+    npm \
+    java \
+    xz \
+    ninja-build
 
     
 RUN dnf clean all
