@@ -52,6 +52,11 @@ RUN dnf -y install \
 RUN dnf -y install \
     bash-completion
 
+# openapi-generator
+RUN dnf -y install \
+    java
+
+
 RUN dnf -y clean all
 RUN rpm -qa --queryformat '%10{size} - %-25{name} \t %{version}\n' | sort -n
 
