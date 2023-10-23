@@ -38,6 +38,7 @@ RUN dnf install --setopt=tsflags='' -y perl-core
 RUN dnf install --setopt=tsflags='' -y ftp
 RUN dnf install --setopt=tsflags='' -y diffstat
 RUN dnf install --setopt=tsflags='' -y diffutils
+RUN dnf install --setopt=tsflags='' -y xmlstarlet
 
 #debug usecase
 RUN dnf install --setopt=tsflags='' -y iputils

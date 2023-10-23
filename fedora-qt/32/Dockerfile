@@ -51,7 +51,8 @@ RUN dnf -y --setopt=install_weak_deps=False --best install \
     npm \
     java \
     xz \
-    ninja-build
+    ninja-build \
+    xmlstarlet
 
     
 RUN dnf clean all
