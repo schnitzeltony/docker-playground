@@ -37,6 +37,7 @@ RUN dnf -y --setopt=install_weak_deps=False --best install \
     qt5-qtwebkit-devel \
     qt5-qtx11extras-devel \
     qt5-qtxmlpatterns-devel \
+    qt5-qtconnectivity-devel \
     qt-devel \
     \
     kf5-networkmanager-qt-devel kf5-modemmanager-qt-devel kf5-syntax-highlighting-devel \
