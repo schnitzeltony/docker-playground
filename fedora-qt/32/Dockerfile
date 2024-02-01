@@ -11,6 +11,7 @@ MAINTAINER Andreas Müller <schnitzeltony@gmail.com>
 
 RUN dnf -y --setopt=install_weak_deps=False --best update
 RUN dnf -y --setopt=install_weak_deps=False --best install \
+    findutils which \
     cmake git clazy \
     systemd-devel \
     openssl-devel \
