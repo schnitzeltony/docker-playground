@@ -12,6 +12,7 @@ MAINTAINER Andreas Müller <schnitzeltony@gmail.com>
 RUN dnf -y --setopt=install_weak_deps=False --best update
 RUN dnf -y --setopt=install_weak_deps=False --best install \
     findutils which \
+    autoconf automake libtool \
     cmake git clazy \
     systemd-devel \
     openssl-devel \
@@ -56,7 +57,14 @@ RUN dnf -y --setopt=install_weak_deps=False --best install \
     ninja-build \
     xmlstarlet
 
-    
+RUN git clone https://github.com/schnitzeltony/cpputest.git; \
+    cd cpputest; \
+    git checkout fedora-patches; \
+    mkdir cpputest_build; \
+    cmake -DCMAKE_INSTALL_PREFIX=/usr -B cpputest_build; \
+    cmake --build cpputest_build -j16; \
+    cmake --install  cpputest_build;
+
 RUN dnf clean all
 
 RUN pip3 install vunit
