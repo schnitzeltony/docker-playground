@@ -20,6 +20,7 @@ RUN dnf -y --setopt=install_weak_deps=False --best install \
     python3-pip \
     xsd xerces-c-devel \
     fftw-devel \
+    librsvg2-tools \
     php-jsonlint python3-jsonschema \
     qt5-linguist qt5-doctools qt5-qtscript \
     qt5-qtlocation-devel \
